@@ -15,7 +15,7 @@
     "prerelease": "yarn build && cd ./tests && yarn generate && yarn build",
     "release": "yarn prerelease && dotenv release-it && yarn postrelease",
     "postrelease": "yarn build --force && yarn update-samples && yarn format",
-    "prepare": "yarn build",
+    "prepare": "yarn generate && yarn build",
     "commitlint": "commitlint",
     "update-samples": "cd ./samples && yarn && yarn generate-api --force",
     "build": "turbo run build",
